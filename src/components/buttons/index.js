@@ -12,7 +12,7 @@ const links = [
     {
         id: 'math',
         title: 'Mathématiques',
-        link: '/docs/category/mathematiques/'
+        link: '/docs/category/mathématiques/'
     },
     {
         id: 'os',
