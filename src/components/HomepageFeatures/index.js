@@ -37,7 +37,7 @@ function Button({id, title, link}) {
     );
 }
 
-export default function Buttons() {
+export default function HomepageFeatures() {
     return (
         <article className={styles.linkHead}>
             {links.map((props, idx) => (
