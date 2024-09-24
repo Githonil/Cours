@@ -117,3 +117,37 @@ Fin
 ```
 
 La dernière à la particularité de toujours rentré au moins une fois.
+
+### Les tableaux :
+
+On peux avoir besoin de stocker plusieurs élément dans un programme. Pour cela on utilise des tableaux **statique**.
+
+- Le tableau a toujours le même nombre d'élément.
+- Le tableau peut contenir qu'un seul type.
+
+La syntaxe est :
+
+```
+Variables:
+    T : Tableau[0..5] de réel
+```
+
+T est un tableau qui **commence** à l'indice 0 et se **termine** à l'indice 5. Le tableau **contient 6 élément**. Et le **type** de ses éléments sont des **réels**.
+
+### Crée un type/alias :
+
+On peux crée/mettre un alias sur un type.
+par exemple :
+
+```
+Type Vecteur3 = Tableau[0..2] de réel.
+```
+
+On confère au mot `vecteur3` la capacité de contenir 3 éléments comme un tableau.
+
+On l'utilise donc comme ceci :
+
+```
+Variables:
+    vec : Vecteur3
+```
