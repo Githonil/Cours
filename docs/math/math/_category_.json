@@ -1,0 +1,8 @@
+{
+    "label": "Mathématiques",
+    "position": 1,
+    "link": {
+        "type": "generated-index",
+        "description": "Tous les chapitres de mathématiques."
+    }
+}
