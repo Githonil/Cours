@@ -28,7 +28,12 @@
 }
 
 @media screen and (max-width: 996px) {
+    .linkPage {
+        margin-right: 0;
+        margin-left: 0;
+    }
     .linkHead {
+        margin: 0;
         grid-template-columns: 1fr;
     }
   }
