@@ -3,9 +3,9 @@ title: Introduction
 position: 1
 description: Bienvenue en dev !
 ---
-# <u>Introduction</u>
+# <u>Introduction :</u>
 
-## <u>Définitions</u> :
+## <u>Définitions :</u>
 
 **<u>Algorithme :</u>** est **une suite d'instructions** qui permet de **résoudre un problème**.
 
