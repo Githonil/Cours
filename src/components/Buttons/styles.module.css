@@ -4,8 +4,6 @@
     color: var(--ifm-navbar-link-color);
     background-color: var(--ifm-background-surface-color);
     padding: 25px;
-    margin: 5px;
-    height: 20vh;
     border: solid 3px var(--ifm-background-surface-color);
     border-radius: 40px;
     box-shadow: 5px 5px 10px #0008;
@@ -39,6 +37,8 @@
     padding: 0;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 100px;
+    column-gap: 25px;
 }
 
 .imgButton {
@@ -53,7 +53,7 @@
         height: 15vh;
     }
     .linkHead {
-        margin: 15px;
+        margin: 25px;
         grid-template-columns: 1fr;
     }
 }
