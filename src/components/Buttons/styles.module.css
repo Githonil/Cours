@@ -4,18 +4,23 @@
     color: var(--ifm-navbar-link-color);
     background-color: var(--ifm-background-surface-color);
     padding: 25px;
-    margin: 75px;
-    height: 125px;
+    margin: 5px;
+    height: 20vh;
     border: solid 3px var(--ifm-background-surface-color);
     border-radius: 40px;
     box-shadow: 5px 5px 10px #0008;
-    font-size: 1.5rem;
+    font-size: 1.5em;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.linkPage:hover {
+
+[data-theme="dark"] .linkPage {
+    fill: white;
+}
+
+.linkPage:hover, [data-theme="dark"] .linkPage:hover {
     text-decoration: none;
     /*background-color: color-mix(in srgb, #111 10%, var(--ifm-background-surface-color));
     border-color: var(--ifm-color-primary);
@@ -30,22 +35,25 @@
 .linkHead {
     margin: 25px;
     width: 100vw;
+    margin: 0;
+    padding: 0;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .imgButton {
     position: absolute;
-    left: -5px;
+    left: 0;
 }
 
 @media screen and (max-width: 996px) {
     .linkPage {
         margin-right: 0;
         margin-left: 0;
+        height: 15vh;
     }
     .linkHead {
-        margin: 0;
+        margin: 15px;
         grid-template-columns: 1fr;
     }
-  }
+}

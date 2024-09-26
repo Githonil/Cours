@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from './styles.module.css';
-import { useColorMode } from '@docusaurus/theme-common'
 import Link from "@docusaurus/Link";
 
 const links = [
@@ -44,7 +43,7 @@ function Button({id, title, link, Svg}) {
     );
 }
 
-export default function HomepageFeatures() {
+export default function Buttons() {
     return (
         <article className={styles.linkHead}>
             {links.map((props, idx) => (

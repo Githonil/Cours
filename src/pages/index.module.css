@@ -21,3 +21,7 @@
   align-items: center;
   justify-content: center;
 }
+
+.main {
+  background-color: color-mix(in srgb, var(--ifm-color-primary) 25%, #000);
+}
