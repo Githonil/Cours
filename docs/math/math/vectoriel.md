@@ -16,14 +16,22 @@ $
 \end{cases}
 $
 
-Un espace vectoriel doit suivre ces lois :
+La loi $\otimes$ doit satisfaire :
 - $\forall \lambda \in \mathbb{K}, \forall x, y\in E, \lambda \otimes (x \oplus y) = (\lambda \otimes x) \oplus (\lambda \otimes y)$
 - $\forall \lambda ,\mu \in \mathbb{K}, \forall x\in E, (\lambda + \mu) \otimes x = (\lambda \otimes x) \oplus (\mu \otimes x)$
 - $\forall \lambda, \mu \in \mathbb{K}, \forall x \in E, (\lambda \times \mu) \otimes x = \lambda \otimes (\mu \otimes x)$
 - $\forall x \in E, 1_k \otimes x = x$
 
 $E$ est ainsi appelé un **espace vectoriel sur $\mathbb{K}$** ou un **$\mathbb{K}$-espace vectoriel** ($\mathbb{K}$-ev).<br/>
-Et les éléments de $E$ sont appelé des **vecteurs**.
+Les éléments de $E$ sont appelés des **vecteurs**.<br/>
+L'élément neutre de $E$, soit $0_E$ est appelé le **vecteur nul**.<br/> 
+Les éléments de $\mathbb{K}$ sont appelés des **scalaires**.
+
+### <u>Exemple :</u>
+
+- Soit $n \in \N,$ $\R^n$ est un espace vectoriel sur $\R$.
+- Soit $n \in \N,$ $\mathbb{C}^n$ est un espace vectoriel sur $\mathbb{C}$.
+- $\R^\R$ (l'essemble des applications $\R\rightarrow\R$, noté aussi $\mathcal{F}(\R)$) est un espace vectoriel sur $\R$, avec l'opération + et la multiplication usuelle sur les scalaires.
 
 ## <u>Propriétés :</u>
 
@@ -137,4 +145,125 @@ Donc $\lambda \otimes (-x) = -(\lambda \otimes x)$
 
 Donc $\forall \lambda \in \mathbb{K}, \forall x \in E, (-\lambda) \otimes x = \lambda \otimes (-x) = -(\lambda \otimes x)$
 
-#### ☐
+$\Box$
+
+## <u>Sous-Espace Vectoriel :</u>
+
+Soit $E,$ un $\mathbb{K}$-ev<br/>
+Soit $F$ un ensemble.
+
+$F$ est un sous-espace vectoriel (sous-ev, ou SEV) $\Leftrightarrow$
+- $F \subset E$
+- $F$ est un espace vectoriel sur $\mathbb{K}$.
+
+:::info[Information]
+$E$ et $\lbrace 0_E \rbrace$ sont des sous-espace vectoriel de $E$.
+:::
+
+## <u>Conditions Nécessaires Suffisantes (CNS) ou caractérisation d'un sous-ev :</u>
+
+Les conditions nécessaires suffisantes sont des conditions qui permettent de facilement démontrer un sous-espace vectoriel.
+
+Soit $E$ un $\mathbb{K}$-ev<br/>
+Soit $F \subset E$
+
+$F$ est un sous-espace vectoriel $\Leftrightarrow$
+- $F \ne \emptyset$
+- $\forall x, y \in F, x \oplus y \in F$
+- $\forall \lambda \in \mathbb{K}, \forall x \in F, \lambda \otimes x \in F$
+
+### <u>Démonstration :</u>
+
+Montrons d'abord que si $F$ est un sous-espace vectoriel $\Rightarrow$ les conditions.
+
+$F$ est un sous-ev, donc un sous-groupe abélien, donc il a obligatoirement un élément neutre.<br/>
+Donc $F \ne \emptyset$
+
+$\forall x, y \in F, x \oplus y \in F$ car $F$ est un sous-ev.
+
+$\forall \lambda \in \mathbb{K}, \forall x \in F, \lambda \otimes x \in F$ car $F$ est un sous-ev.
+
+---
+
+Montrons maintenant que les conditions $\Rightarrow F$ est un sous-ev.
+
+On sait que la loi $\otimes$ satifait :
+- $\forall \lambda \in \mathbb{K}, \forall x, y\in E, \lambda \otimes (x \oplus y) = (\lambda \otimes x) \oplus (\lambda \otimes y)$
+- $\forall \lambda ,\mu \in \mathbb{K}, \forall x\in E, (\lambda + \mu) \otimes x = (\lambda \otimes x) \oplus (\mu \otimes x)$
+- $\forall \lambda, \mu \in \mathbb{K}, \forall x \in E, (\lambda \times \mu) \otimes x = \lambda \otimes (\mu \otimes x)$
+- $\forall x \in E, 1_k \otimes x = x$
+
+
+Montrons que $\otimes$ est stable pour $F$.
+
+Si $x, y \in F$ alors :
+
+1.
+$(x \oplus y) \in F$<br/>
+Posons $z = (x \oplus y)$ alors $\lambda \otimes z \in F$<br/>
+Donc $\lambda \otimes (x \oplus y) \in F$
+
+$(\lambda \otimes x) \in F, (\lambda \otimes y) \in F$<br/>
+Poson $z = (\lambda \otimes x)$ et $w = (\lambda \otimes y)$ alors $z \oplus w \in F$<br/>
+Donc $(\lambda \otimes x) \oplus (\lambda \otimes y) \in F$
+
+2.
+$\lambda + \mu \in \mathbb{K}$<br/>
+Posons $a = \lambda + \mu$ alors $a \otimes x \in F$<br/>
+Donc $(\lambda + \mu) \otimes x \in F$
+
+L'autre côté a déjà été montré dans le 2.
+
+3.
+$\lambda \times \mu \in \mathbb{K}$<br/>
+Posons $a = \lambda \times \mu$ alors $a \otimes x \in F$<br/>
+Donc $(\lambda \times \mu) \otimes x \in F$
+
+$\mu \times x \in F$<br/>
+Posons $y = \mu \times x$ alors $\lambda \otimes y \in F$<br/>
+Donc $\lambda \otimes (\mu \times x) \in F$
+
+4.
+Déjà prouvé par la condition : $\forall \lambda \in \mathbb{K}, \forall x \in F, \lambda \otimes x \in F$
+
+---
+
+Démontrons que $F$ est un sous-groupe abélien de $E$.
+
+La loi $\oplus$ vient du groupe abélien $(E, \oplus)$.<br/>
+$0_E \in F$ car $\forall x \in F, 0_{\mathbb{K}} \otimes x = 0_E$ d'après les propriétés de la loi $\otimes$ (Qu'on a démontré juste au-dessus).<br/>
+Et $\forall x \in F, -1_{\mathbb{K}} \otimes x = -x$ d'après les proprétés de la loi $\otimes$.<br/>
+Comme $\forall x, y \in F, x \oplus y \in F$<br/>
+Alors $(F, \oplus)$ est un sous-groupe abélien.
+
+Ainsi $F$ est un sous-espace vectoriel $\Leftrightarrow$ les conditions.
+
+$\Box$
+
+### <u>Une autre CNS :</u>
+
+Une autre CNS plus simple est :
+
+- $F \ne \emptyset$
+- $\forall \lambda \in \mathbb{K}, \forall x, y \in F, \lambda x \oplus y \in F$ (ou $\lambda x = \lambda \otimes x$)
+
+### <u>Démonstration :</u>
+
+Peu importe le sens de l'implication, dans tous les cas, $F \ne \emptyset$
+
+Montrons d'abord la première CNS $\Rightarrow$ la seconde.
+
+$\forall \lambda \in \mathbb{K}, \forall x, y \in F$
+
+$\lambda x \in F$<br/>
+Posons $z = \lambda x$ alors $z \oplus y \in F$<br/>
+Donc $\lambda x \oplus y \in F$
+
+Montrons maintenant que la seconde $\Rightarrow$ la première.
+
+Si $y = 0_F$ alors $\lambda x \in F$<br/>
+Si $\lambda = 1_{\mathbb{K}}$ alors $x \oplus y \in F$
+
+Donc la première CNS $\Leftrightarrow$ la seconde.
+
+$\Box$
